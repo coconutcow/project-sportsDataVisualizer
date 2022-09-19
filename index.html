@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <style>
+
+            .first-div {
+                width:33.33%;
+                height:680px;
+                float:left;
+                background-color:rgb(104, 91, 199);
+            }
+
+            .second-div {
+                width:33.33%;
+                height:680px;
+                float:left;
+                background-color:rgb(104, 91, 199);
+            }
+
+            .third-div {
+                width:33.33%;
+                height:680px;
+                float:left;
+                background-color:rgb(104, 91, 199);
+
+            }
+            .ss-strong-u489 {
+                position: absolute;
+                font-family: Verdana;
+                font-size: 36px;
+                text-align: center;
+                left: 417px;
+                color: #5CD9CC;
+                top: 149px;
+            }
+            .ss-span-pz59 {
+                color: rgb(255, 224, 102);
+            }
+            .ss-strong-1siz {
+                position: absolute;
+                font-family: Verdana;
+                text-align: center;
+                font-size: 19px;
+                border-image-source: none;
+                border-image-width: 1;
+                border-image-outset: 0;
+                border-image-repeat: stretch;
+                border-color: transparent;
+                background-image: none;
+                background-color: transparent;
+                color: rgb(255, 255, 255);
+                font-weight: normal;
+                width: 415px;
+                height: 115px;
+                transform-origin: 122.281px 19.1004px 0px;
+                left: 393px;
+                top: 216px;
+            }
+            .ss-image-45sm {
+                position: absolute;
+                top: 516px;
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                left: 422px;
+            }
+            .ss-image-j626 {
+                top: 454px;
+                background-image: url(assets/Sanket.jpg);
+                background-color: transparent;
+                background-position: center;
+                background-size: cover;
+                border-image-source: none;
+                border-image-width: 1;
+                border-image-outset: 0;
+                border-image-repeat: stretch;
+                border-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-width: 6px;
+                border-radius: 53px;
+                left: 655px;
+            }
+            .ss-image-10u1 {
+                top: 454px;
+                background-image: url(assets/Humberto.jpeg);
+                border-radius: 53px;
+                border-style: solid;
+                border-width: 6px;
+                background-position: center;
+                background-size: cover;
+                border-image-width: 1;
+                border-image-outset: 0;
+                background-position: center;
+                border-image-repeat: stretch;
+                border-color: rgb(255, 255, 255);
+                left: 440px;
+            }
+
+            .ss-strong-sb91 {
+                position: absolute;
+                font-family: Verdana;
+                font-size: 36px;
+                text-align: center;
+                background-image: none;
+                background-color: transparent;
+                color: rgb(255, 224, 102);
+                left: 432px;
+                top: 571px;
+            }
+            .ss-strong-o56r {
+                left: 430px;
+            }
+            .ss-span-il20 {
+                font-size: 24px;
+            }
+            .ss-span-4ga5 {
+                color: rgb(255, 255, 255);
+                font-weight: normal;
+                font-size: 16px;
+            }
+            .ss-strong-5wyn {
+                top: 570px;
+                left: 667px;
+            }
+            .ss-page-110t {
+                background-image: none;
+                background-color: rgb(104, 91, 199);
+                z-index: -1;
+            }
+
+            .ss-page-wrapper {
+                background-color: rgb(255, 255, 255);
+                position: fixed;
+                transform: translateZ(0px);
+                z-index: auto;
+            }
+
+            .ss-page-size {
+                width: 1200px;
+                height: 700px;
+                float: left;
+                position: fixed;
+                z-index: auto;
+            }
+        </style>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="slider.js"></script>
+    </head>
+    <body>
+
+        <button class="tablink1" onclick="openPage('Home', this, 'black')" id="defaultOpen">Home</button>
+        <button class="tablink2" onclick="openPage('Standings', this, 'black')" >Standings</button>
+        <button class="tablink3" onclick="openPage('MatchHistory', this, 'black')" >Match History</button>
+        <button class="tablink4" onclick="openPage('TeamStats', this, 'black')">Team Statistics</button>
+
+        <div id="Home" class="tabcontent">
+
+            <div id = "screen1" width = 1200 height = 700 class="ss-page-110t ss-page-wrapper ss-page-size">
+                <strong class="ss-strong-u489" >Data <span class="ss-span-pz59">Visualization</span></strong><strong class="ss-strong-1siz">An effort to visualise data pertaining to the infamous Spanish Football League, The LaLiga. For this project, we have utlised D3, a Javascript library, HTML, and CSS.</strong>
+                <strong style="position: absolute;font-family: Verdana;text-align: center;font-size: 25px;font-weight: normal;color: rgb(242, 95, 92);top: 378px;left: 547px;">✂ <span style="color: rgb(255, 255, 255);font-size: 15px;">with a</span> <span style="color: #5CD9CC;">☻</span></strong>
+                <ss-image class="ss-image-45sm ss-image-10u1" id="ss-image_1" scaling="cover" alignment="right"></ss-image>
+                <ss-image class="ss-image-45sm ss-image-j626" id="ss-image_2" scaling="contain" alignment="top"></ss-image><strong class="ss-strong-sb91 ss-strong-o56r"><span class="ss-span-il20">humberto</span><br><span class="ss-span-4ga5">4714800</span></strong><strong class="ss-strong-sb91 ss-strong-5wyn"><span class="ss-span-il20">sanket</span><br><span class="ss-span-4ga5">4709433</span></strong>
+
+            </div>
+
+        </div>
+
+        <div id="Standings" class="tabcontent" style="padding-top: 55px;">
+            <span style="padding-left: 20px;">
+                <select id="season_s" onchange="changeDataStandings()">
+                    <option selected value="1819">Season 18/19</option>
+                    <option value="1718">Season 17/18</option>
+                    <option value="1617">Season 16/17</option>
+                </select>
+                <button id="play-button">Play</button>
+                <button onclick="reset()">Reset</button>
+            </span>
+            <div id = "screen2" width = 1200 height = 700>
+                <svg id="svg-standings" width="1200" height="680" style="background-color: rgb(104, 91, 199);">
+                    <g id="paths"></g>
+                    <g id="circles"></g>
+                    <g id="imgs"></g>
+                    <g id="yaxis"></g>
+                    <g id="brush"></g>
+                    <g id="slider"></g>
+                    <g id="Team"></g>
+                    <g id="W"></g>
+                    <g id="D"></g>
+                    <g id="L"></g>
+                    <g id="GF"></g>
+                    <g id="GA"></g>
+                    <g id="GD"></g>
+                    <g id="Pts"></g>
+                    <g id="Headers"></g>
+                </svg>
+            </div>
+        </div>
+
+        <div id="MatchHistory" class="tabcontent" style="padding-top: 55px;">
+            <span style="padding-left: 20px;">
+                <select id="season_m" onchange="changeDataMatchHistory()">
+                    <option selected value="1819">Season 18/19</option>
+                    <option value="1718">Season 17/18</option>
+                    <option value="1617">Season 16/17</option>
+                </select>
+
+                <select id="team1" onchange="teamChange(1)">
+                </select>
+                <select id="team2" onchange="teamChange(2)">
+                </select>
+            </span>
+            <div id = "screen3" >
+                <svg id="matchhistory" width="1200" height="634">
+                    <g id="bordert1"></g>
+                    <g id="bordert2"></g>
+                    <g id="teamimages">
+                        <image id="team1logo" x="70" y="70" height="200" width="200" xlink:href="assets/RMA.png"></image>
+                        <image id="team2logo" x="70" y="350" height="200" width="200" xlink:href="assets/BAR.png"></image>
+                    </g>
+                    <g id="bars1home"></g>
+                    <g id="bars1away"></g>
+                    <g id="bars2home"></g>
+                    <g id="bars2away"></g>
+                </svg>
+            </div>  
+        </div>
+
+        <div id="TeamStats" class="tabcontent">
+
+            <div class="container">
+
+                <div class="first-div" style="text-align:center">
+
+                    <h3 id=>Team</h3>
+                    <span>
+                        <!--<label >Team:</label>-->
+                        <select id="teamFilter" onchange="metricChange()">
+                            <option value="ALA">Alaves</option>
+                            <option value="ATH">Ath Bilbao</option>
+                            <option value="ATM">Ath Madrid</option>
+                            <option selected value="BAR">Barcelona</option>
+                            <option value="BET">Betis</option>
+                            <option value="CEL">Celta</option>
+                            <option value="EIB">Eibar</option>
+                            <option value="ESP">Espanol</option>
+                            <option value="LEG">Leganes</option>
+                            <option value="RMA">Real Madrid</option>
+                            <option value="SEV">Sevilla</option>
+                            <option value="RSO">Sociedad</option>
+                            <option value="VAL">Valencia</option>
+                            <option value="VIL">Villarreal</option>
+                            <option value="GET">Getafe</option>
+                            <option value="GIR">Girona</option>
+                            <option value="LEV">Levante</option>
+                            <option value="HUE">Huesca</option>
+                            <option value="VLD">Valladolid</option>
+                            <option value="RAY">Vallecano</option>
+                        </select>
+                    </span>
+
+                    </br>
+                </br>
+
+            <svg id="teamdetails" width="300" height="300">
+                <g id="tioutline"></g>
+                <g id="teamimage">
+                    <image id="teamlogo"  height="220" width="220" x=40 y=40 xlink:href="assets/BAR.png"></image>
+                </g>
+            </svg>
+
+            </br>
+        <span id="founded"></span>
+
+        <div>
+            <div style="float:left; margin-left:60px;">
+                <h3>Coach</h3>
+                <svg id="teamdetails" width="120" height="80">
+                    <g id="coachimage">
+                        <image id="coachpic"  height="80" width="120" x=0 y=0 xlink:href="assets/Ernesto Valverde.jpg"></image>
+                    </g>
+                </svg>
+                </br>
+            <span id="coach"></span>
+        </div>
+
+        <div style="float:right; margin-right:60px;">
+            <h3>Ground</h3>
+            <span id="ground"></span>
+            <h3>Market Value</h3>
+            <span id="marketvalue"></span>
+        </div>
+        </div>
+
+    </div>
+
+<div class="second-div" style="text-align:center">
+
+    <h3 id=>Formation</h3>
+
+    <svg width="250" height="300">
+        <g id="field">
+            <title>Field</title>
+            <rect stroke="#024407" id="svg_10" height="300" width="250" y="0" x="0"  stroke-width="5" fill="#17B522"/>
+            <rect stroke="#024407" id="svg_6" height="32" width="100" y="0" x="75" stroke-width="3" fill="none"/>
+            <rect stroke="#024407" id="svg_2" height="32" width="100" y="268" x="75" stroke-width="3" fill="none"/>
+            <rect id="svg_1" height="20" width="70" y="280" x="90" stroke-width="3" stroke="#024407" fill="#024407"/>
+            <rect id="svg_7" height="20" width="70" y="0" x="90" stroke-width="3" stroke="#024407" fill="#024407"/>
+            <line id="svg_8" y2="150" x2="250" y1="150" x1="0"  stroke-width="3" stroke="#024407" />
+            <ellipse ry="28.5" rx="28.5" id="svg_11" cy="150" cx="125"  stroke-width="3" stroke="#024407" fill="none"/>
+        </g>
+        <g id="players"></g>
+    </svg>
+
+    <h3 id="formation"></h3>
+    <div>
+        <div style="float:left; margin-left:30px; margin-right:10px">
+            <h3>Appearances</h3>
+            <span id="apps"></span>
+        </div>
+        <div style="float:left; margin-left:10px; margin-right:10px">
+            <h3>Wins</h3>
+            <span id="wins"></span>
+        </div>
+        <div style="float:left; margin-left:10px; margin-right:10px">
+            <h3>Draws</h3>
+            <span id="draws"></span>
+        </div>
+        <div style="float:left; margin-left:10px; margin-right:10px">
+            <h3>Loses</h3>
+            <span id="loses"></span>
+        </div>
+    </div>
+
+    <div>
+        <div style="float:left;margin-left:100px;">
+            <h3>Scored</h3>
+            <span id="scored"></span>
+        </div>
+        <div style="float:right;margin-right:100px;">
+            <h3>Conceded</h3>
+            <span id="conceded"></span>
+        </div>
+    </div>
+
+</div>
+
+<div class="third-div" style="text-align:center">
+
+    <h3>Statistics</h3>
+    <select id="filter1" onchange="metricChange()">
+        <option selected value="App">Appearances</option>
+        <option value="Mins">Minutes Played</option>
+        <option value="G">Goals</option>
+        <option value="A">Assists</option>
+        <option value="Y">Yellow Cards</option>
+        <option value="R">Red Cards</option>
+        <option value="SPG">Shots per Game</option>
+        <option value="PS">Passing Success</option>
+        <option value="AW">Aerials Won</option>
+        <option value="MOTM">Man of the match</option>
+    </select>
+    <label>vs.</label>
+    <select id="filter2" onchange="metricChange()">
+        <option value="App">Appearances</option>
+        <option value="Mins">Minutes Played</option>
+        <option selected value="G">Goals</option>
+        <option value="A">Assists</option>
+        <option value="Y">Yellow Cards</option>
+        <option value="R">Red Cards</option>
+        <option value="SPG">Shots per Game</option>
+        <option value="PS">Passing Success</option>
+        <option value="AW">Aerials Won</option>
+        <option value="MOTM">Man of the match</option>
+    </select>
+
+    <svg id="metrics" width="400" height="1000" >
+        <g id="s4xaxis"></g>
+        <g id="s4yaxis"></g>
+        <g id="points"></g>
+        <g id="s4Headers"></g>
+        <g id="Player"></g>
+        <g id="App"></g>
+        <g id="Mins"></g>
+        <g id="G"></g>
+        <g id="A"></g>
+        <g id="R"></g>
+        <g id="Y"></g>
+        <g id="PS"></g>
+        <g id="SPG"></g>
+        <g id="AW"></g>
+        <g id="MOTM"></g>
+    </svg>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+<script src="screen2.js"></script>
+<script src="screen3.js"></script>
+<script src="screen4p.js"></script>
+<script src="screen4t.js"></script>
+<script src="Field.js"></script>
+
+</body>
+</html> 
